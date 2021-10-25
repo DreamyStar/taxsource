@@ -10,10 +10,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
     <base href="<%=basePath%>">
     <title>查看办税专员</title>
-    <link href="static/css/base.css" rel="stylesheet">
-    <link rel="stylesheet" href="static/easyui/uimaker/easyui.css">
-    <link rel="stylesheet" type="text/css" href="static/easyui/uimaker/icon.css">
-    <link href="static/css/edit.css" rel="stylesheet">
+    <link href="../../static/css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../static/easyui/uimaker/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../static/easyui/uimaker/icon.css">
+    <link href="../../static/css/edit.css" rel="stylesheet">
 
   </head>
   <body>
@@ -41,8 +41,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                      <tr>
                         <td class="kv-label">性别</td>
                         <td class="kv-content">
-                        	<label> ${"1" == requestScope.taxer.sex ? "男":""}
-                        	${"0" == requestScope.taxer.sex ? "女":""}</label> 
+                        	<label> ${"男" == requestScope.taxer.sex ? "男":""}
+                        	${"女" == requestScope.taxer.sex ? "女":""}</label>
                         	</td>
                         <td class="kv-label">生日</td>
                         <td class="kv-content"><label>${requestScope.taxer.birthday }</label></td>
@@ -62,10 +62,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
         </div>
     </div>
   </body>
-  <script type="text/javascript" src="static/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="static/easyui/jquery.easyui.min.js"></script>
- <script type="text/javascript" src="static/easyui/easyui-lang-zh_CN.js"></script>
-<script type="text/javascript" src="static/js/calendar.js"></script>
+  <script type="text/javascript" src="../../static/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../static/easyui/jquery.easyui.min.js"></script>
+ <script type="text/javascript" src="../../static/easyui/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="../../static/js/calendar.js"></script>
 <script type="text/javascript">
 $("input[name=birthday]").datebox({
     formatter: easyUIFormater,
