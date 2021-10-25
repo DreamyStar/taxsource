@@ -9,6 +9,7 @@ import com.zhidisoft.system.entity.User;
 import com.zhidisoft.util.EncryptUtil;
 
 import java.util.List;
+import java.util.Map;
 
 
 public class Test {
@@ -16,11 +17,11 @@ public class Test {
 //        UserDao userDao = new UserDao();
 //        User zg = userDao.selectName("zhangsan","aaaaa");
 //        System.out.println(zg);
-        EncryptUtil en = new EncryptUtil();
-        String x = en.encryptMD5("ccccc");
-        System.out.println(x);
+//        EncryptUtil en = new EncryptUtil();
+//        String x = en.encryptMD5("ccccc");
+//        System.out.println(x);
         //594f803b380a41396ed63dca39503542
-        TaxPayerDao to = new TaxPayerDao();
+//        TaxPayerDao to = new TaxPayerDao();
 //        List<TaxPayer> taxPayers = to.selectPayers(1, 6);
 //        System.out.println(taxPayers);
 //        int count = to.count();
@@ -32,8 +33,10 @@ public class Test {
 //        System.out.println(id);
 //        TaxPayer payer = TaxPayerDao.getPayer("101");
 //        System.out.println(payer);
-        Taxer taxerById = TaxerDao.getTaxerById(2);
-        System.out.println(taxerById);
+//        Taxer taxerById = TaxerDao.getTaxerById(2);
+//        System.out.println(taxerById);
+        boolean b = TaxerDao.deleteUser(3);
+        System.out.println(b);
 
 
     }

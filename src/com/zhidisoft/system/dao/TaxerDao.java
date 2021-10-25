@@ -151,5 +151,9 @@ public class TaxerDao {
         }
         return taxer;
     }
+    public static boolean deleteUser(int id){
+        boolean row = DBUtil.update("delete from tb_taxer where id=?",id);
+        return row;
+    }
 
 }

@@ -41,8 +41,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                      <tr>
                         <td class="kv-label">性别</td>
                         <td class="kv-content">
-                        	<label> ${"男" == requestScope.taxer.sex ? "男":""}
-                        	${"女" == requestScope.taxer.sex ? "女":""}</label>
+                        	<label> ${"1" == requestScope.taxer.sex ? "男":""}
+                        	${"0" == requestScope.taxer.sex ? "女":""}</label>
                         	</td>
                         <td class="kv-label">生日</td>
                         <td class="kv-content"><label>${requestScope.taxer.birthday }</label></td>
