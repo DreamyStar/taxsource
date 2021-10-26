@@ -126,7 +126,7 @@
             pagination: true,
             striped: true,
             pageList: [2, 4, 6],
-            pageSize: 2,
+            pageSize: 4,
             columns: [[
                 {field: "taxerCode", "title": "办税专员编号"},
                 {field: "taxerName", "title": "办税专员名称"},

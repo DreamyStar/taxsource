@@ -70,7 +70,7 @@ public class ListTaxPayerServlet extends HttpServlet {
         int totalRows = tpd.getSearchRows(payerCode, payerName);
         json.put("total", totalRows);
         json.put("rows", jsonArray);
-        out.print(json);
+        out.write(json.toString());
         out.flush();
         out.close();
 

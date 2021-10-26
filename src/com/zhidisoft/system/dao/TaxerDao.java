@@ -88,7 +88,7 @@ public class TaxerDao {
      */
     public static List<Map<String, String>> getSearchResult(int pageNum,int pageSize,String taxerName){
         boolean checkName = taxerName!=null&&taxerName.toString().length()>0;
-        String sql = "select * from tb_taxer where 1=1 ";
+        String sql = "select * from tb_taxer where state=0 ";
         if(checkName){
             sql=sql+" and taxerName like '%"+taxerName+"%' ";
         }
@@ -151,8 +151,13 @@ public class TaxerDao {
         }
         return taxer;
     }
-    public static boolean deleteUser(int id){
-        boolean row = DBUtil.update("delete from tb_taxer where id=?",id);
+    /**
+     * 删除任务
+     * @param id 指定id
+     * @return
+     */
+    public static boolean deleteTaxer(String id){
+        boolean row = DBUtil.update("update tb_taxer set state=1 where id=?",id);
         return row;
     }
 
