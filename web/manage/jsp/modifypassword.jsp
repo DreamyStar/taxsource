@@ -10,13 +10,13 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <base href="<%=basePath%>">
     
     <title>修改密码</title>
-    <link rel="stylesheet" type="text/css" href="static/css/base.css" >
-    <link rel="stylesheet" type="text/css" href="static/easyui/uimaker/easyui.css">
-    <link rel="stylesheet" type="text/css" href="static/easyui/uimaker/icon.css">
-    <link rel="stylesheet" type="text/css" href="static/css/edit.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/base.css" >
+    <link rel="stylesheet" type="text/css" href="../../static/easyui/uimaker/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../static/easyui/uimaker/icon.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/edit.css">
    
   </head>
-    <script type="text/javascript" src="static/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="../../static/jquery/jquery.min.js"></script>
   <body>
     <div class="container">
     <div class="content">
@@ -46,9 +46,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
        </div>
        </div>
   </body>
-  <script type="text/javascript" src="static/jquery/jquery.min.js"></script>
-  <script type="text/javascript" src="static/easyui/jquery.easyui.min.js"></script>
-  <script type="text/javascript" src="static/js/calendar.js"></script>
+  <script type="text/javascript" src="../../static/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="../../static/easyui/jquery.easyui.min.js"></script>
+  <script type="text/javascript" src="../../static/js/calendar.js"></script>
     <script type="text/javascript">
     $(function(){
     	$("#modify_pwd").on("click",function(){

@@ -2,6 +2,7 @@ package com.zhidisoft.system.servlet;
 
 import com.google.code.kaptcha.Constants;
 import com.zhidisoft.base.BaseServlet;
+import com.zhidisoft.manage.dao.TaxPayerDao;
 import com.zhidisoft.system.dao.TaxerDao;
 import com.zhidisoft.system.dao.UserDao;
 import com.zhidisoft.system.entity.Taxer;
@@ -40,6 +41,10 @@ public class UserLoginServlet extends HttpServlet {
         String s = EncryptUtil.encryptMD5(password);
         User user = UserDao.selectName(name,s);
         Taxer taxer = TaxerDao.getTaxer(name);
+        TaxPayerDao tpd = new TaxPayerDao();
+        int count = tpd.count();
+        req.getSession().setAttribute("count",count);
+
 
         if (user != null){
             if ("on".equals(remUser)){

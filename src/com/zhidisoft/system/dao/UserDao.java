@@ -14,11 +14,13 @@ public class UserDao {
 //    private static Connection con = new  DBUtil().getConnection();
 
     public static User selectName(String username,String password){
-        String sql = "select id,username,password from tb_user where username=? and password=?";
-        List<Map<String, String>> list = DBUtil.query(sql,username,password);
+        String sql = "select * from tb_user where username=? and password=?";
+        List<Map<String, String>> list = DBUtil.query(sql, username, password);
         User user = null;
         for (Map<String, String> map: list){
-            user = new User(Integer.parseInt(map.get("id")),map.get("username"),map.get("password"));
+            user = new User(Integer.parseInt(map.get("id")),map.get("username"),map.get("password"),
+                    Integer.parseInt(map.get("taxerId")),map.get("salt"),Integer.parseInt(map.get("permissionId")),
+                    Integer.parseInt(map.get("state")),map.get("email"));
         }
         return user;
 
@@ -83,13 +85,13 @@ public class UserDao {
             value = result.get(0).get("password");
         }
         //密码uuid必须不能都是数字，加密
-        String value1 = EncryptUtil.encryptMD5(oldPassword+uuid);
+        String value1 = EncryptUtil.encryptMD5(oldPassword);
         //判断用户密码是否正确
         if(!value1.equals(value)){
             return false;
         }
         //对新密码加密
-        String password = EncryptUtil.encryptMD5(newPassword+uuid);
+        String password = EncryptUtil.encryptMD5(newPassword);
         boolean row = DBUtil.update("update tb_user set password=? where username =?", password,username);
         return row;
     }

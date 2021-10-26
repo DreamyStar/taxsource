@@ -11,10 +11,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>任务录入</title>
-    <link rel="stylesheet" type="text/css" href="static/css/base.css" >
-    <link rel="stylesheet" type="text/css" href="static/easyui/uimaker/easyui.css">
-    <link rel="stylesheet" type="text/css" href="static/easyui/uimaker/icon.css">
-    <link rel="stylesheet" type="text/css" href="static/css/edit.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/base.css" >
+    <link rel="stylesheet" type="text/css" href="../../static/easyui/uimaker/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../static/easyui/uimaker/icon.css">
+    <link rel="stylesheet" type="text/css" href="../../static/css/edit.css">
   </head>
   <style>
   	input{
@@ -30,7 +30,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 <tbody>
                 <tr>
                     <td class="kv-label">用户员工编号</td>
-                    <td class="kv-content"><input type="text" name="payerCode" value="${sessionScope.user.taxerId }"></td>
+
+                    <td class="kv-content">${sessionScope.user.taxerId }</td>
                     <td class="kv-label">用户权限</td>
                     <td class="kv-content">${sessionScope.user.permissionId}</td>
                     <td class="kv-label">用户状态</td>
@@ -75,9 +76,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 </div>
 
   </body>
-  <script type="text/javascript" src="static/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="static/easyui/jquery.easyui.min.js"></script>
-<script type="text/javascript" src="static/js/calendar.js"></script>
+  <script type="text/javascript" src="../../static/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="../../static/easyui/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="../../static/js/calendar.js"></script>
 <script type="text/javascript">
     $("input[name=executeTime]").datebox({
         formatter: easyUIFormater,

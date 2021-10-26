@@ -35,9 +35,11 @@ public class Test {
 //        System.out.println(payer);
 //        Taxer taxerById = TaxerDao.getTaxerById(2);
 //        System.out.println(taxerById);
-        boolean b = TaxerDao.deleteUser(3);
-        System.out.println(b);
-        System.out.println("aaaaaaaaaaaaaaa");
+//        boolean b = TaxerDao.deleteUser(3);
+//        System.out.println(b);
+//        System.out.println("aaaaaaaaaaaaaaa");
+        User user = UserDao.selectName("zhangsan", "df483402b9bfeb234717a32c6e86280e");
+        System.out.println(user);
 
 
     }
