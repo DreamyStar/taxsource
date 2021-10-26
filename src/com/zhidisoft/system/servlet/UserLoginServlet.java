@@ -41,6 +41,7 @@ public class UserLoginServlet extends HttpServlet {
         String s = EncryptUtil.encryptMD5(password);
         User user = UserDao.selectName(name,s);
         Taxer taxer = TaxerDao.getTaxer(name);
+
         TaxPayerDao tpd = new TaxPayerDao();
         int count = tpd.count();
         req.getSession().setAttribute("count",count);

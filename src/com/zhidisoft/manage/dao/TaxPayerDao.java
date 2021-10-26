@@ -40,7 +40,7 @@ public class TaxPayerDao {
         return payers;
     }
      public int count(){
-        String sql = "select count(id) from tb_tax_payer";
+        String sql = "select count(id) from tb_tax_payer where removeState=0";
          List<Map<String, String>> list = DBUtil.query(sql);
          int a = Integer.parseInt(list.iterator().next().get("count(id)"));
          return a;
