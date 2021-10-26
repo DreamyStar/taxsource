@@ -37,6 +37,7 @@ public class Test {
 //        System.out.println(taxerById);
         boolean b = TaxerDao.deleteUser(3);
         System.out.println(b);
+        System.out.println("aaaaaaaaaaaaaaa");
 
 
     }
