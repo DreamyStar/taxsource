@@ -67,6 +67,7 @@ public class TaxPayerDao {
         sql=sql+" limit ?,?";
         List<Map<String, String>> list = DBUtil.query(sql, (pageNum-1)*pageSize,pageSize);
         return list;
+
     }
 
     /**
